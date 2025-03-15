@@ -6,67 +6,30 @@ body {
 }
 
 
-h2::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 4px; /* Epaisseur du trait */
-   
-}
-
-/* Lettre "H" transparente pour "Accueil" */
-#accueil h2::after {
-    content: "H";
-    font-size: 100px;
-    color: rgba(0, 0, 0, 0); /* Transparence */
-    position: absolute;
-    top: -50px; /* Positionner la lettre */
-    left: 10px;
-}
-
-.hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
 
 .hero .background {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -2;
-}
-
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
     z-index: -1;
 }
 
-.hero .content {
-    position: relative;
-    max-width: 600px;
-}
+
 
 .hero h1 {
-    font-size: 48px;
-    margin: 10px 0;
+    font-size: 30px;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+
 }
 
 .hero p {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 20px;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    margin-top: 20px;
+
 }
 
 .transparent-letter {
@@ -74,8 +37,8 @@ h2::after {
     font-size: 300px;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.1);
-    top: 50%;
-    left: 50%;
+    top: 30%;
+    left: 30%;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: -2;
 }
