@@ -1,6 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
 body {
     font-family: Arial, sans-serif;
+    color: white;
     margin: 0;
     padding: 0;
+    
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Menu toggle (navigation) */
+.menu-toggle {
+    position: absolute;
+    top: 20px; /* Ajuste pour aligner avec le logo */
+    right: 50px; /* Menu aligné à droite */
+}
+
+/* Style de la navigation */
+.menu-toggle nav {
+    display: flex; /* Pour que les liens soient sur la même ligne */
+    gap: 20px; /* Espace entre les liens */
+}
+
+.menu-toggle nav a {
+    text-decoration: none; /* Pas de soulignement sur les liens */
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    
 }
