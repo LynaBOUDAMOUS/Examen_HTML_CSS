@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;/*police par defaut*/
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+   
 }
 
 header {
     
-    color: #fff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -22,7 +21,7 @@ header .logo img {
 
 header nav a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none;/*enlever le soulignement*/
     margin: 0 15px;
 }
 
@@ -47,17 +46,20 @@ header nav a {
 
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 30px
     margin: 0;
 }
 
 .hero p {
     font-size: 1.2em;
+    text-align: justify;
 }
 
 .transparent-letter {
-    opacity: 0.5;
-    font-size: 10px
-    margin: 0;
+    opacity: 0.2;
+    font-size: 20em;
+    font-family: 'Roboto Slab', serif; /* Google Font */
+    margin:0;
+    
 }
 
