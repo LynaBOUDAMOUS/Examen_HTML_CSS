@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;/*police par defaut*/
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+   
 }
 
 header {
     
-    color: #fff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -22,7 +21,6 @@ header .logo img {
 
 header nav a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none;/*enlever le soulignement*/
     margin: 0 15px;
 }
-
