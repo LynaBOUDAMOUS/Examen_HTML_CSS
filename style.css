@@ -2,3 +2,27 @@
 body {
     font-family: 'Roboto Slab', serif;
 }
+h2 {
+    font-size: 30px;
+    position: relative;
+    padding-bottom: 20px; /* Espace entre le texte et le trait */
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px; /* Epaisseur du trait */
+    background-color: #000; /* Couleur du trait */
+}
+
+#accueil h2::after {
+    content: "H";
+    font-size: 100px;
+    color: rgba(0, 0, 0, 0); /* Rendre la lettre transparente */
+    position: absolute;
+    top: -50px; /* Ajuster la position en fonction de l'espace */
+    left: 10px;
+}
