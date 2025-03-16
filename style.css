@@ -104,3 +104,15 @@ body {
     
    
 }
+
+.separateur{
+    justify-items: right;
+    flex-direction: column;
+    width:99px;
+    border:2px solid rgb(193, 176, 134);;
+    background: #c5a47e;
+    margin:20px auto;
+    margin-left: 50px;
+    
+
+}
