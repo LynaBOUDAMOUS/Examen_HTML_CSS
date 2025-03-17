@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
 body {
-    font-family: Arial, sans-serif;/*police par defaut*/
+    font-family: 'Roboto Slab', serif;
     margin: 0;
     padding: 0;
     
@@ -23,4 +23,141 @@ header nav a {
     color: #fff;
     text-decoration: none;/*enlever le soulignement*/
     margin: 0 15px;
+}
+
+/* Correction Header */
+.header {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Titre centré avec ligne décorative */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2d3436;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin: 2rem 0;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #c1b086;
+}
+
+/* Paragraphe ajusté */
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #636e72;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: justify;
+    padding: 0 15px;
+}
+
+/* Bouton positionné */
+.button {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: #c1b086;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: 2px solid #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Grid Container amélioré */
+.container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container div {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid #c1b086;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.re {
+    grid-row: 1 / span 2;
+    height: 100%;
+    min-height: 500px;
+}
+
+.french-food, .mexican-food, .italien-food, .deutch-food {
+    height: 240px;
+    width: 400px;
+}
+
+/* Effets hover coordonnés */
+.container div:hover {
+    transform: scale(1.02);
+    z-index: 1;
+}
+
+.container div:hover img {
+    transform: scale(1.05);
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+    
+    .re {
+        grid-row: auto;
+        min-height: 300px;
+    }
+    
+    .button {
+        position: static;
+        margin: 15px auto;
+        display: block;
+        width: fit-content;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .french-food, .mexican-food, .italien-food, .deutch-food {
+        height: 200px;
+    }
 }
