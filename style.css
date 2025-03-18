@@ -26,197 +26,108 @@ header nav a {
     margin: 0 15px;
 }
 
-#content {
+#gallery {
     display: flex;
-    flex-direction: row; /* Images à gauche, texte à droite */
-    align-items: center; /* Alignement vertical */
-    justify-content: center; /* Centrer horizontalement */
-    gap: 50px; /* Espacement entre images et texte */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
     padding: 50px;
 }
 
 #image-container {
-    position: relative; /* Permet le positionnement absolu des enfants */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px; /* Espacement entre les images */
     padding: 20px;
-    height: 60vh; /* Prend toute la hauteur de la fenêtre */
+    height: 60vh;
+    margin-top: 205px;
+    margin-left: -20px;
+    gap: 5px;
 }
 
-/* Encadré avec coins arrondis et bordure dorée */
-.image-box {
-    position: relative;
-    width: 318px; /* Largeur fixe pour les images */
-    height: 390px; /* Hauteur fixe pour le premier box (portrait) */
-    overflow: hidden;
-    border-radius: 15px;
-    border: 2px solid #c1b086; /* Bordure dorée */
-    top: 80px; /* Ajuste la position verticale */
-    left: 118px; /* Décale légèrement à gauche */
+
+#image-container input {
+    display: none;
 }
 
-/* Style de l'image dans le premier encadré */
-#box1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Permet de couvrir l'intégralité de l'espace */
-}
-
-/* Style de l'image dans le deuxième encadré */
-#box2 {
-    position: relative;
-    width: 318px; /* Largeur fixe pour les images */
-    height: 390px; /* Hauteur fixe pour le premier box (portrait) */
-
-    border-radius: 15px;
+#image-container label {
+    width: 33px;
+    height: 390px;
+    border-radius: 25px;
     border: 2px solid #c1b086;
-    overflow: hidden;
-    top: 80px; /* Ajuste la position verticale */
-    left: 133px; /* Décale légèrement à gauche */
+    cursor: pointer;
+    transition: width 1.5s ease, border-color 0.8s ease, opacity 0.6s ease;
+    box-shadow: 2px 4px 10px black;
+    background-size: cover;
+    background-position: left;
+    display: block;
+    opacity: 0.6; /* Effet de transparence par défaut */
 }
 
-#box2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Assure que l'image couvre tout l'encadré */
+#image-container input:checked + label {
+    width: 705px;
+    border: 2px solid #664f14;
+    opacity: 1; /* Image agrandie sans transparence */
 }
 
-/* Style de l'image dans le deuxième encadré */
-#box3 {
-    position: relative;
-    width: 318px; /* Largeur fixe pour les images */
-    height: 390px; /* Hauteur fixe pour le premier box (portrait) */
-
-    border-radius: 15px;
-    border: 2px solid #c1b086;
-    overflow: hidden;
-    top: 80px; /* Ajuste la position verticale */
-    left: 148px; /* Décale légèrement à gauche */
-}
-
-#box3 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Assure que l'image couvre tout l'encadré */
-}
-
-#text-container {
+.text-container {
     width: 30%;
+    position: absolute;
+    top: 20px;
+    left: 70px;
 }
 
-/* Style du texte */
-#text-container h1 {
+.text-container h1 {
     font-size: 20px;
     color: black;
-    font-weight: normal;
     line-height: 1.6;
     text-align: left;
-    margin-left: 55px ;
+    margin-left: 55px;
+    font-weight: normal;
 }
 
-#text-container h2 {
-    position: relative;
+.text-container h2 {
     font-size: 9px;
     color: #555;
-    font-weight: normal;
     line-height: 1.6;
     text-align: left;
     margin-left: 55px;
     width: 135%;
     margin-top: 10px !important;
-    padding-top: 10px; /* Espace entre la ligne et le texte */
-    text-align: justify; /* Justifier le texte */
+    text-align: justify;
+    position: relative;
+    font-weight: normal;
 }
 
-#text-container h2::before {
+.text-container h2::before {
     content: "";
     display: block;
-    width: 60px; /* Longueur de la ligne */
-    height: 2.5px; /* Épaisseur de la ligne */
-    background-color: #c1b086; /* Couleur dorée */
+    width: 60px;
+    height: 2.5px;
+    background-color: #c1b086;
     position: absolute;
-    top: -8px; /* Distance entre la ligne et le texte */
-    left: 0; /* Aligné au début du texte */
-}
-
-#text-container {
-    position: absolute;
-    top: 20px; /* Distance depuis le haut */
-    left: 70px; /* Distance depuis la gauche */
-    width: auto;
+    top: -8px;
+    left: 0;
 }
 
 .home-button {
     font-weight: normal;
     display: inline-block;
-    margin-top: -340px; /* Espacement par rapport au texte */
+    margin-top: -340px;
     margin-left: 900px;
     padding: 15px 30px;
-    background-color: #c1b086; /* Couleur dorée */
+    background-color: #c1b086;
     color: white;
     text-decoration: none;
     font-size: 7px;
-    border-radius: 20px; /* Bords arrondis */
-    border: 1px solid white; /* Contour blanc très fin */
-    box-shadow: 5px 10px 35px rgba(0, 0, 0, 0.5); /* Ombre autour du bouton */
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 5px 10px 35px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s ease-in-out;
     position: absolute;
 }
 
 .home-button:hover {
-    background-color: #c1b086; /* Légère variation au survol */
+    background-color: #c1b086;
 }
-
-
-/* Miniatures */
-#thumbnails {
-    display: flex;
-    gap: 5px;
-    margin-top: 205px;
-    margin-left: -20px;
-}
-
-#thumbnails img {
-    width: 33px; /* Petites images */
-    height: 390px; /* Même hauteur que la grande */
-    object-fit: cover;
-    border-radius: 25px;
-    border: 2px solid #c1b086;
-    cursor: pointer;
-    transition:   width 1.4s ease, border-color 0.8s ease, opacity 0.6s ease; /* Ajout de la transition pour l'opacité */
-    box-shadow: 2px 4px 10px black; /* Effet d'ombre pour mieux ressortir */
-    object-position: left; /* Positionner l'image sur la gauche */
-}
-
-#thumbnails img.enlarged {
-    width: 705px; /* Augmente la largeur de l'image lors du clic */
-    border: 2px solid #664f14; /* Bordure marron lorsque l'image est agrandie */
-    object-position: left; /* Toujours positionner l'image sur la gauche lorsqu'elle est agrandie */
-}
-
-#thumbnails img.transparent {
-    opacity: 0.6; /* Rendre l'image semi-transparente */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
