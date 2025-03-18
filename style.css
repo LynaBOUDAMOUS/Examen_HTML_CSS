@@ -15,28 +15,29 @@ header {
     align-items: center;
 }
 
-header .logo img {
+.logo img {
     height: 50px;
+    
 }
 
-header nav a {
+.menu-toggle a {
     color: #fff;
     text-decoration: none;/*enlever le soulignement*/
     margin: 0 15px;
 }
 
-.hero {
+.Acceuil{
     position: relative;
     text-align: center;
     color: #fff;
 }
 
-.hero .background {
+.background img {
     width: 100%;
     height: auto;
 }
 
-.hero .content {
+.content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,12 +46,12 @@ header nav a {
 
 
 
-.hero h1 {
+.content h1 {
     font-size: 30px
     margin: 0;
 }
 
-.hero p {
+.content p {
     font-size: 1.2em;
     text-align: justify;
 }
