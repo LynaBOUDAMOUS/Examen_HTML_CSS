@@ -24,3 +24,75 @@ header nav a {
     text-decoration: none;/*enlever le soulignement*/
     margin: 0 15px;
 }
+
+p {
+    position: relative; 
+}
+
+p::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #c1b086;
+    margin: 0.2rem auto;
+    position: absolute;
+      /* Position from the left */
+    transform: translateX(-50%);  /* Center horizontally */
+    top: -15px;  /* Adjust this as needed */
+}
+
+#gallery {
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.home-button {
+    padding: 10px 20px;
+    background-color: #c1b086 ;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border: #fff 2px solid;
+    
+}
+
+
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+    
+    
+    
+}
+
+.gallery-container img{
+    position: relative;
+    width: calc(33.33% - 10px); /* Adjust the size of the images */
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #c1b086;
+    
+    
+}
+
+@media (max-width: 768px) {
+    .gallery-container img {
+        width: calc(50% - 10px); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container img {
+        width: 100%; /* Stack images on smaller screens */
+    }
+}
