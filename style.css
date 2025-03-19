@@ -1,66 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
 body {
     font-family: 'Roboto Slab', serif; 
-    margin: 0;
     padding: 0;
+    margin : 0 auto;
+    color : #fff;
+    background: url(images/home1.jpg) no-repeat center center fixed; /* Image en fond */
+    background-size: cover; /* Assure que l'image couvre toute la page */
+    height: 100vh;  /* Assure que la hauteur prend toute la fenêtre */
+    overflow: hidden;
     
    
 }
 
-header {
-    
-    padding: 20px;
+header h1 {
+    display: inline-block; 
+}
+.logo  img {
+    width: 90px; 
+    height: auto; 
+    margin-left: 125px; 
+    margin-top: 20px;
+}
+
+header nav {
+    display: inline-block; 
+    float:right; 
+    margin-top: -30px; 
+    position: relative; 
+    right: 120px; 
+}
+
+
+header nav a {
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none; 
+    color: #fff; 
+    font-size: 12px; 
+    padding: 0 20px; 
+    cursor: pointer; 
+    margin-left: -15px; 
+}
+
+header nav a:hover {
+    color:  #c1b086 ;
+
+}
+
+.Acceuil {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height:600px;
+    padding-top: 81px;
+    position: relative; 
+    overflow: hidden; 
 }
 
-.logo img {
-    height: 50px;
-    
+.Acceuil h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 55px;
+    color: white; 
+    padding: 0; 
+    background: none; 
+    border: none; 
+    text-align: left; 
+    font-weight: normal; 
+    margin-left: 190px; 
+    position: relative; 
+    z-index: 1; 
 }
 
-.menu-toggle a {
+.Acceuil p {
+    font-family: 'Roboto Slab', serif !important;
+    font-weight: normal; 
+    font-size: 11.4px;
+    width:  46.3%;
+    line-height: 20px;
     color: #fff;
-    text-decoration: none;/*enlever le soulignement*/
-    margin: 0 15px;
+    margin-left:225px; 
+    margin-top: -4px; 
+    position: relative; 
+    z-index: 1; 
+    text-align: justify; 
 }
 
-.Acceuil{
-    position: relative;
-    text-align: center;
-    color: #fff;
-}
-
-.background img {
-    width: 100%;
-    height: auto;
-}
-
-.content {
+.Acceuil::after {
+    content: 'H'; 
+    font-family: 'Roboto Slab', serif;
+    font-size: 306px; 
+    color: rgba(255, 255, 255, 0.2); 
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 26.4%; 
+    left: 24.35%;
+    transform: translate(-50%, -50%); 
+    z-index: -1; 
+    font-weight: bold;
 }
 
 
 
-.content h1 {
-    font-size: 30px
-    margin: 0;
-}
 
-.content p {
-    font-size: 1.2em;
-    text-align: justify;
-}
 
-.transparent-letter {
-    opacity: 0.2;
-    font-size: 20em;
-    font-family: 'Roboto Slab', serif; /* Google Font */
-    margin:0;
-    
-}
+
 
