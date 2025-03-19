@@ -11,4 +11,37 @@ body {
     
 }
 
+header h1 {
+    display: inline-block; 
+}
+.logo  img {
+    width: 90px; 
+    height: auto; 
+    margin-left: 125px; 
+    margin-top: 20px;
+}
+
+header nav {
+    display: inline-block; 
+    float:right; 
+    margin-top: -30px; 
+    position: relative; 
+    right: 120px; 
+}
+
+
+header nav a {
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none; 
+    color: #fff; 
+    font-size: 12px; 
+    padding: 0 20px; 
+    cursor: pointer; 
+    margin-left: -15px; 
+}
+
+header nav a:hover {
+    color:  #c1b086 ;
+
+}
 
