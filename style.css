@@ -1,80 +1,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
 body {
-    font-family: Arial, sans-serif;/*police par defaut*/
+    font-family: 'Roboto Slab', serif;/*police par defaut*/
     margin: 0;
     padding: 0;
     
    
 }
 
-header {
-    
-    padding: 20px;
+
+
+#Amenities {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Dispose les éléments en colonne */
+    height: 100vh; /* Utilise toute la hauteur de l'écran */
 }
 
-header .logo img {
-    height: 50px;
+/* Première moitié avec l'image */
+.overlay{
+    width: 100%; /* L'image occupe toute la largeur */
+    height: 58vh; /* La moitié haute de l'écran */
+    overflow: hidden; /* Cache tout ce qui dépasse de l'image */
+    border-bottom: 2px solid #c1b086; /* Bordure dorée entre l'image et la partie blanche */
+    border-top: 2px solid #c1b086; /* Bordure dorée en haut de l'image */
+    position: relative; /* Nécessaire pour positionner l'encadré bleu */
 }
 
-header nav a {
-    color: #fff;
-    text-decoration: none;/*enlever le soulignement*/
-    margin: 0 15px;
-}
-
-#Amenities{
+.overlay img {
     width: 100%;
-    height: 300px;
-    background: url("images/ami.jpg")no-repeat center center/cover;
-    position: relative;
-    border: #c1b086 2px solid;
- 
-   
-
+    height: 100%;
+    object-fit: cover; /* Assure que l'image couvre toute la zone sans déformation */
 }
 
-.overlay {
-    position: absolute;
-    bottom: -200px;
-    left: 55%;
-    transform: translateX(-50%);
-    width: 60%;
-    background: rgba(173, 216, 230, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: #c1b086 2px solid;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    
+.blue-box {
+    position: fixed; /* Position fixe par rapport à la fenêtre */
+    top: 63.5%; /* Position verticale au centre */
+    left: 67.1%; /* Position horizontale au centre */
+    transform: translate(-50%, -50%); /* Centrer l'encadré au milieu de la page */
+    width: 580px; /* Largeur de l'encadré bleu */
+    height: 335px; /* Hauteur de l'encadré bleu */
+    background-color: #3f9cc1; /* Couleur de l'encadré */
+    border: 3px solid #c1b086; /* Bordure dorée */
+    border-radius: 15px; /* Coins arrondis */
+    z-index: 10; /* Assure qu'il soit au-dessus de l'image et du fond blanc */
+    padding: 32px; /* Ajoute de l'espace autour du texte à l'intérieur de l'encadré */
+    box-sizing: border-box; /* Assure que le padding ne dépasse pas de l'encadré */
+    color: white; /* Couleur du texte dans l'encadré */
+    box-shadow: 4px 4px 4px black; /* Effet d'ombre pour mieux ressortir */
 
+    transition: opacity 0.3s ease-in-out; /* Animation fluide */
+    opacity: 0.4; /* Légèrement transparent */
 }
 
-.amenities {
-    list-style: none;
-    padding: 0;
+/* Quand on survole, il devient opaque */
+.blue-box:hover {
+    opacity: 1;
+}
+
+/* Style pour le texte dans l'encadré */
+.blue-box h1 {
+    font-size: 16px; /* Taille du texte */
+    color: white; /* Couleur du texte */
+    margin: 0; /* Supprime les marges par défaut */
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal; /* Texte en gras */
+    margin: 0 0 20px 0; /* Ajout de l'espace sous le titre */
+    margin-top: 1px; /* Espace entre la bordure de l'encadré et le titre */
+}
+
+/* Style pour le texte dans l'encadré */
+.blue-box p {
+    font-size: 10px; /* Taille du texte */
+    color: white; /* Couleur du texte */
+    margin: 0; /* Supprime les marges par défaut */
+    font-weight: normal; /* Texte en gras */
+    font-family: 'Roboto Slab', serif;
+    line-height: 2; /* Espacement entre les lignes */
+    text-align: justify; /* Justifier le texte */
+}
+
+/* Conteneur pour les icônes */
+.icons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 20px;
+    padding: 30px 0;
+    color: white; /* Assure que les icônes sont en couleur blanche sur fond bleu */
+}
+
+
+/* Style pour chaque icône */
+.icon-item {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: left;
+    gap: 10px; /* Espace entre l’icône et le texte */
 }
-.amenities li {
-    width: 45%;
-    margin: 5px 0;
+
+
+.icon-item span {
+    font-size: 9px; /* Taille de l'icône */
+    color: #fff; /* Couleur de l'icône */
 }
-.button {
-    position: absolute;
-    bottom: -220px;
-    right: 20px;
-    background: #c2a47a;
+
+.icon-item p {
+    font-size: 9px;
+    color: white; /* Couleur du texte sous les icônes */
+    margin: 0;
+    text-align: left;
+}
+
+
+
+
+.home-button {
+    position: fixed; 
+    top: 92.5%; /* Ajuste la hauteur */
+    left: 110%; /* Même alignement que .blue-box */
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    background-color: #c1b086;
     color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
     text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border: white 2px solid;
-    box-shadow: 5px 5px rgba(173, 217, 129,0);
+    font-size: 7px;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease-in-out;
 }
+
+
+
+
+
+
+
+
+
