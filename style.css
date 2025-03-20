@@ -4,11 +4,12 @@ body {
     padding: 0;
     margin : 0 auto;
     color : #fff;
-    background: url(images/home1.jpg) no-repeat center center fixed;
-    background-size: cover; 
-    height: 100vh;  
+    background: url(images/home1.jpg) no-repeat center center fixed; /* Image en fond */
+    background-size: cover; /* Assure que l'image couvre toute la page */
+    height: 100vh;  /* Assure que la hauteur prend toute la fenêtre */
     overflow: hidden;
     
+   
 }
 
 header h1 {
@@ -44,4 +45,61 @@ header nav a:hover {
     color:  #c1b086 ;
 
 }
+
+.Acceuil {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height:600px;
+    padding-top: 81px;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.Acceuil h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 55px;
+    color: white; 
+    padding: 0; 
+    background: none; 
+    border: none; 
+    text-align: left; 
+    font-weight: normal; 
+    margin-left: 190px; 
+    position: relative; 
+    z-index: 1; 
+}
+
+.Acceuil p {
+    font-family: 'Roboto Slab', serif !important;
+    font-weight: normal; 
+    font-size: 11.4px;
+    width:  46.3%;
+    line-height: 20px;
+    color: #fff;
+    margin-left:225px; 
+    margin-top: -4px; 
+    position: relative; 
+    z-index: 1; 
+    text-align: justify; 
+}
+
+.Acceuil::after {
+    content: 'H'; 
+    font-family: 'Roboto Slab', serif;
+    font-size: 306px; 
+    color: rgba(255, 255, 255, 0.2); 
+    position: absolute;
+    top: 26.4%; 
+    left: 24.35%;
+    transform: translate(-50%, -50%); 
+    z-index: -1; 
+    font-weight: bold;
+}
+
+
+
+
+
+
 
